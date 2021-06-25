@@ -3,41 +3,147 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link href="../src/style.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Airspace Lab</title>
+  <style>
+    * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #888;
+    color: white;
+    padding: 15px;
+    margin:0
+  }
+  .header-middle {
+    padding: 10px;
+    text-align: left;
+    font-size: 13px;
+    font-family: Arial;
+    width: 15%;
+  }
+  
+  .header-left {
+    font-family: "Times New Roman";
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .header-right {
+    float: right;  
+  }
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 33%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+  }
+  aside{
+  background-color: #666;
+  width: 30%;
+  position: absolute;
+  right: 70%;
+  height: 600px;
+  }
+  tr:nth-of-type(odd) {
+      background-color:#ccc;
+  }
+  tr:nth-of-type(even) {
+      background-color:rgb(115, 171, 204);
+  }
+  th {
+  color: white;
+  background: rgb(41, 123, 201);
+}
+
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  article {
+    float: right;
+    padding: 10px;
+    width: 70%;
+    background-color: #777;
+    height: 600px; /* only for demonstration, should be removed */
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #888;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  </style>
   </head>
-  <body>
+<body>
+  <header>
+    <a class="header-left">Exercise App</a>
+    <a class="header-middle">HOME</a> <a class="header-middle">CONTACT</a> 
+    <a class="header-right">
+      <i class="fa fa-user-circle fa-lg"></i>
+    </a>
+    
+  </header>
+  
+  <section>
+  
+  <aside>
+  <div id="innerSide" style="  background: #ccc; height:24px">
+  <a><i class="fa fa-angle-double-left fa-lg" style="float:right; padding: 5px"></i></a>
+  <div id="root"></div>
+  </div>
+  </aside>
+    <article>
+      <h1 id="article">To see more details, click on any row</h1>
+      
+    </article>
+  </section>
+  
+  <footer>
+    <p>Copyright &#169 2021 </p>
+  </footer>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    
+ 
+    </body>
 </html>
